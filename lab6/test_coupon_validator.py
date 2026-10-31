@@ -38,6 +38,7 @@ def test_coupon_discount_rejects_empty_or_negative_cart(cart_total):
         (["WELCOME10"], 200, True, "mon", 20),
         (["WELCOME10", "FLAT100"], 1000, False, "mon", 100),
         (["WELCOME10", "WEEKEND20"], 500, True, "sat", 100),
+        (["WEEKEND20"], 100, False, "sat", 40),
         (["WELCOME10"], 1000, True, "mon", 100),
         (["WELCOME10"], 100, True, "mon", 10),
     ],
